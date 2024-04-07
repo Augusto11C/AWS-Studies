@@ -71,3 +71,7 @@
   * [Domain 1 - Cloud Concepts](aws-cloud-practitioner/smith-oreilly-course/domain-1-cloud-concepts.md)
   * [Domain 2 - Security and Compliance](aws-cloud-practitioner/smith-oreilly-course/domain-2-security-and-compliance.md)
 * [Exam Questions CLF-C01](aws-cloud-practitioner/exam-questions-clf-c01.md)
+
+## AWS Architecture Design Ideas and Discussions
+
+* [Load Balancer and API Gateway](aws-architecture-design-ideas-and-discussions/load-balancer-and-api-gateway.md)
