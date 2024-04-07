@@ -33,7 +33,7 @@
 * Application Load Balancer (V2 - new generation) - 2016 - **ALB**:
   * HTTP, HTTPS, WebSockets.
   * Layer 7
-* Network Load Balancer (v2 - new generation) - 2017 - **NLB**:
+* Network Load Balancer (V2 - new generation) - 2017 - **NLB**:
   * TCP, TLS (secure TCP, UDP).
   * Layer 4
 * Gateway Load Balancer - 2020 - GWLB
@@ -48,14 +48,14 @@
 
 <figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-* Users can access load balancer from anywhere using HTTP or HTTPS.
+* From the figure above, users can access load balancer from anywhere (_source = 0.0.0.0/0_) using HTTP or HTTPS.
 
 **Application's Security Group:**
 
 <figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-* Allow traffic only from Load Balancer.
-* The source of it is the Load Balancer's Security Group (sg-054b5ff5ea02f2b6e)
+* From the image above, the application's security group is configured to allow traffic **only** from Load Balancer.
+* The source of it is the Load Balancer's Security Group (_source = sg-054b5ff5ea02f2b6e_)
 
 ### Application Load Balancer
 
@@ -83,7 +83,7 @@
 
 * Fixed hostname (XXX.region.elb.amazonaws.com).
 * The application servers don’t see the IP of the client directly.
-  * • The true IP of the client is inserted in the header `X-Forwarded-For`.
+  * The true IP of the client is inserted in the header `X-Forwarded-For`.
   * We can also get Port (`X-Forwarded-Port`) and proto (`X-Forwarded-Proto`).
 
 ### Network Load Balancer
@@ -225,7 +225,7 @@ Feature enabled by default in the ALB.
 * :exclamation:Time to complete "in-flight requests" while the instance is de-registering or unhealthy.
 * Stops sending new requests to the EC2 instance which is de-registering.
 * Between 1 to 3600 seconds (default: 300 seconds).
-* Can be disablet (set value to 0).
+* Can be disabled (set value to 0).
 
 <figure><img src="../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
