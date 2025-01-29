@@ -11,9 +11,9 @@
 * :warning::warning::warning:**GetCallerIdentity**: This operation returns details about the IAM user or role that is used in the API call. It’s a helpful way to audit and track API usage.
 * **DecodeAuthorizationMessage**: This operation decodes the error message when an AWS API call is denied. It’s useful for troubleshooting and understanding permission issues.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (264).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (265).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### STS - Assume a Role
 
@@ -22,7 +22,7 @@
 * **Using AWS STS**: The AWS Security Token Service (STS) should be used to retrieve temporary security credentials. These credentials allow you to impersonate the IAM Role that you have access to, using the `AssumeRole` API operation.
 * **Temporary Credentials**: The credentials provided by STS are temporary and can be valid for a duration ranging from 15 minutes up to 1 hour. This reduces the risk associated with long-term credentials, enhancing the security of your AWS environment.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (263).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### STS - with MFA
 
@@ -37,7 +37,7 @@
 
 By using these elements, you can enhance the security of your AWS operations with MFA. It’s a powerful way to protect your resources and data.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p> Font: DAVIS, 2022</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (262).png" alt=""><figcaption><p>Font: DAVIS, 2022</p></figcaption></figure>
 
 ### The `iam:PassRole`
 
@@ -47,13 +47,13 @@ By using these elements, you can enhance the security of your AWS operations wit
 >
 > Next, imagine an IAM User who has permissions to **launch an Amazon EC2 instance**. While launching the instance, the user can specify an IAM Role to associate with the instance. If the user — who is _not_ an Administrator — were to launch an EC2 instance with the _Administrators_ role, then they could login to the instance and issue commands using permissions from that role. It would be a way for them to **circumvent permissions**: while not being an administrator themselves, they could assign the IAM Role to a resource, and then use that resource to gain privileged access.
 >
-> To prevent this scenario, IAM requires that the user be granted the `iam:PassRole` permission for the _Administrators_ role. If the user does not have that permission, then they will not be permitted to launch the EC2 instance as described, or to assign that role to any other services. **It gives them permission to **_**pass a role**_** to a service or resource.**
+> To prevent this scenario, IAM requires that the user be granted the `iam:PassRole` permission for the _Administrators_ role. If the user does not have that permission, then they will not be permitted to launch the EC2 instance as described, or to assign that role to any other services. **It gives them permission to \_pass a role**\_\*\* to a service or resource.\*\*
 >
 > Font: [Stackoverflow](https://stackoverflow.com/questions/63148108/understanding-iam-passrole)
 
 > Question: Does it mean, when a non-admin user tries to launch an instance that requires admin role, it will throw error to not allow non admin user to launch instance?
 >
-> Answer:  If a user tries to launch an Amazon EC2 instance with an IAM Role and they do not have `iam:PassRole` permissions to pass that role then, yes, the launch of the instance will be denied.
+> Answer: If a user tries to launch an Amazon EC2 instance with an IAM Role and they do not have `iam:PassRole` permissions to pass that role then, yes, the launch of the instance will be denied.
 
 <details>
 
@@ -103,9 +103,8 @@ In summary, the "PassRole" permission is a safeguard that ensures only authorize
 * AD Connector
 * Simple AD
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (266).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 ### References
 
 DAVIS, Neal. _How to Use MFA with the AWS CLI_. \[Videoaula]. YouTube, 2022. Disponível em: [https://www.youtube.com/watch?v=BNpbGHhk5Tc](https://www.youtube.com/watch?v=BNpbGHhk5Tc). Acesso em: 11 out. 2023.
-

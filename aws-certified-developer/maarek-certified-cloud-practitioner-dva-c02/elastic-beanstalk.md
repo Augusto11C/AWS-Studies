@@ -14,21 +14,21 @@
 * Application Version:
 * Environment:
   * Collection of AWS resources running an application version (only one app version at a time).
-  * Tiers:&#x20;
+  * Tiers:
   * Web Server Environment Tier: This tier is designed to support web applications that handle HTTP(S) requests. It provisions resources to accommodate your web application
   * Worker Environment Tier: This tier is used for applications that need to handle background-processing tasks. This tier do not run web server processes.
     * [This tier can be used to offload long-running processes from your web tier. The tiers communicate with each other via SQS. When your web instance needs to spawn a background job, it posts a message to the shared queue with the job details](https://stackoverflow.com/questions/43302799/what-are-the-difference-between-worker-tier-and-web-tier-in-aws-beanstalk).
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-### Elastic Beanstalk  Supported Platforms
+### Elastic Beanstalk Supported Platforms
 
 * Go, Java SE, Java with Tomcat, .NET Core on Linux, .NET on Windows Server, Node.js, PHP, Python, Ruby, Packer Builder, Single Container Docker, Multi-Container Docker, Preconfigured Docker.
 * If not supported, you can write your custom platform (advanced).
 
 ### Elastic Beanstalk - Deployment Modes
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Elastic Beanstalk - Deployment Options for Updates
 
@@ -43,12 +43,12 @@
     * :warning: Route 53 can be setup using weighted policies to redirect a little bit of traffic to the stage environment.
     * Using Beanstalk, “swap URLs” when done with the environment test.
 
-    <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="263"><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (33).png" alt="" width="263"><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Traffic Splitting: canary testing – send a small % of traffic to new deployment.
 
 The following table compares deployment method properties:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
 
 ### Elastic Beanstalk CLI
 
@@ -75,7 +75,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
 * Versions that are currently used won’t be deleted.
 * Option not to delete the source bundle in S3 to prevent data loss.
 
-### Elastic Beanstalk -  Extensions
+### Elastic Beanstalk - Extensions
 
 * A zip file containing our code must be deployed to Elastic Beanstalk.
 * All the parameters set in the UI can be configured with code using files.
@@ -88,7 +88,7 @@ We can install an additional CLI called the “EB cli” which makes working wit
 * :warning: Note: Resources managed by `.ebextensions` get deleted if the environment goes away.
 * :warning: Note: you can define CloudFormation resources in your .ebextensions to provision ElastiCache, an S3 bucket, etc.
 
-### Elastic Beanstalk -  Migration Load Balancer Type
+### Elastic Beanstalk - Migration Load Balancer Type
 
 * After creating an Elastic Beanstalk environment, you cannot change the Elastic Load Balancer type (only the configuration).
 * To migrate:
@@ -96,17 +96,17 @@ We can install an additional CLI called the “EB cli” which makes working wit
   * deploy your application onto the new environment.
   * perform a CNAME swap or Route 53 update.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-### Elastic Beanstalk -  RDS
+### Elastic Beanstalk - RDS
 
 * RDS can be provisioned with Beanstalk, which is great for dev / test.
 * This is not great for prod as the database lifecycle is tied to the Beanstalk environment lifecycle.
 * The best for prod is to separately create an RDS database and provide our EB application with the connection string.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-#### Elastic Beanstalk -  Migration RDS
+#### Elastic Beanstalk - Migration RDS
 
 * Create a snapshot of RDS DB (as a safeguard).
 * Go to the RDS console and protect the RDS database from deletion.
@@ -115,20 +115,17 @@ We can install an additional CLI called the “EB cli” which makes working wit
 * Terminate the old environment (RDS won’t be deleted).
 * Delete CloudFormation stack (in DELETE\_FAILED state).
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### TODO Hands-on
 
 * 2x Elastic Beanstalk application:
   * One Web Elastic Beanstalk Application.
   * One Worker Elastic Beanstalk Application.
-  * Communication using SQS.&#x20;
+  * Communication using SQS.
 * Load balancing (try creating a standalone ALB that sends requests to the Elastic Beanstalk application). Try not to create an ALB that is coupled with EB.
 * RDS.
 
 ### References
 
 AWS. _Deploying applications to Elastic Beanstalk environments_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.deploy-existing-version.html](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.deploy-existing-version.html)>. Acesso em: 30 set. 2023a.
-

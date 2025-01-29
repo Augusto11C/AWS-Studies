@@ -1,6 +1,6 @@
 # Amplify
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (261).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **AWS Amplify**: This is a comprehensive set of tools and services designed to facilitate the creation of mobile and web applications. It’s often likened to “Elastic Beanstalk for mobile and web applications” due to its ease of use and extensive capabilities.
 * **Essential Features**: AWS Amplify provides a host of must-have features for modern applications. These include data storage, user authentication, file storage, and machine learning capabilities, all powered by robust AWS services.

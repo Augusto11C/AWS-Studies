@@ -7,11 +7,11 @@
 * For achive objects that you don't need fast access to, move them to **Glacier** or **Glacier Deep Archive.**
 * Moving Objects can be automated using a **Lifecycle Rules**.
 
-<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Amazon S3 - Lifecycle Rules
 
-<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (224).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 * **Transition Actions:** Configure objects to transition to another storage class.
   * Move objects to Standard IA Class 60 days after creation.
@@ -31,7 +31,7 @@
 * Permanently delete noncurrent versions of objects.
 * Delete expired object delete markers or incomplete multipart uploads.
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### Amazon S3 - Lifecycle Rules (Scenario 1)
 
@@ -44,7 +44,7 @@
 
 #### Amazon S3 - Lifecycle Rules (Scenario 2)
 
-* A rule in your company states that you should be able to **recover** your **deleted S3 objects immediately** for 30 days (although this may happen rarely).&#x20;
+* A rule in your company states that you should be able to **recover** your **deleted S3 objects immediately** for 30 days (although this may happen rarely).
 * After this time, and for up to 365 days, deleted objects should be recoverable within 48 hours.
 * **How would you design this?**
   * Enable S3 Versioning in order to have object versions, so that “deleted objects” are in fact hidden by a “delete marker” and can be recovered.
@@ -60,23 +60,23 @@
 * 24 to 48 hours to start seeing data analysis coming out of it.
 * output of this service: .csv.
 
-<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (225).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 ### S3 Event Notifications
 
 * Notify when: S3:ObjectCreated, S3:ObjectRemoved, S3:ObjectRestore, S3:Replication…
 * Object name filtering possible (\*.jpg).
-* **Use case:**&#x20;
+* **Use case:**
   * Generate thumbnails of images uploaded to S3.
 * Can create as many “S3 events” as desired.
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (227).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **S3 Event Notifications - IAM Permissions**
 
-<figure><img src="../../.gitbook/assets/image (104).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### S3 Event Notifications with Amazon EventBridge
 
@@ -84,9 +84,7 @@
 * Multiple Destinations – ex Step Functions, Kinesis Streams / Firehose…
 * EventBridge Capabilities – Archive, Replay Events, Reliable delivery.
 
-<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### S3 - Baseline Performance
 
@@ -107,13 +105,11 @@
 * Recommended for files > 100MB.
 * Can help parallelize uploads (speed up transfers).
 
-<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (229).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <details>
 
 <summary><span data-gb-custom-inline data-tag="emoji" data-code="1f44d">👍</span> How Does Multi-Part Upload Process Work?</summary>
-
-
 
 Multipart upload is a feature in Amazon S3 that allows you to upload large objects in parts, which can improve reliability, speed, and efficiency when dealing with very large files. Here's an overview of how the multipart upload process for S3 works (AWS, 2023a):
 
@@ -133,20 +129,17 @@ Multipart upload is a feature in Amazon S3 that allows you to upload large objec
 * Increase transfer speed by transferring file to an AWS edge location which will forward the data to the S3 bucket in the target region.
 * :warning: Compatible with multi-part upload.
 
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (230).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 <details>
 
 <summary>How Does S3 Transfer Acceleration Work?</summary>
 
-
-
 Amazon S3 Transfer Acceleration works as described below (AWS, 2023b):
 
-1.  **Accelerated Endpoints**: When you enable Transfer Acceleration for an Amazon S3 bucket, AWS creates a unique endpoint for that bucket, which has an "accelerated" URL. This URL is different from the standard S3 bucket URL.\
+1.  **Accelerated Endpoints**: When you enable Transfer Acceleration for an Amazon S3 bucket, AWS creates a unique endpoint for that bucket, which has an "accelerated" URL. This URL is different from the standard S3 bucket URL.\\
 
-
-    <figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 2. **Data Transfer**: When you send an HTTP request to the accelerated URL for uploading or downloading objects, the request is automatically routed to the nearest CloudFront edge location. These edge locations are strategically distributed around the world.
 3. **Edge Caching**: CloudFront edge locations act as caching points. If the object you're requesting is already cached at the nearest edge location, CloudFront delivers it directly to you, significantly reducing latency. If it's not cached, CloudFront retrieves the object from the source S3 bucket.
 4. **Optimized Route**: CloudFront dynamically selects the best path for data transfer based on network conditions, reducing the distance data needs to travel and minimizing packet loss and network congestion. This optimized routing helps improve transfer speed.
@@ -162,8 +155,6 @@ Amazon S3 Transfer Acceleration works as described below (AWS, 2023b):
 * Can be used to speed up downloads.
 * Can be used to retrieve only partial data (for example the head of a file).
 
-
-
 ### S3 Select and Glacier Select
 
 * Retrieve less data using SQL by performing server-side filtering.
@@ -172,17 +163,15 @@ Amazon S3 Transfer Acceleration works as described below (AWS, 2023b):
 
 [S3 Select and Glacier Select – Retrieving Subsets of Objects](https://aws.amazon.com/blogs/aws/s3-glacier-select/)
 
-
-
-<figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Font: HUNT, 2017</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption><p>Font: HUNT, 2017</p></figcaption></figure>
 
 **Example of S3 Select Use:**
 
-<figure><img src="../../.gitbook/assets/image (111).png" alt=""><figcaption><p>Font: PATEL, 2021</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (235).png" alt=""><figcaption><p>Font: PATEL, 2021</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (110).png" alt=""><figcaption><p>Font: PATEL, 2021</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption><p>Font: PATEL, 2021</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption><p>Font: PATEL, 2021</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption><p>Font: PATEL, 2021</p></figcaption></figure>
 
 ### S3 User-Defined Object Metadata & S3 Object Tags
 
@@ -198,8 +187,6 @@ Amazon S3 Transfer Acceleration works as described below (AWS, 2023b):
   * :warning:Useful for **analytics** **purposes** (using S3 Analytics to group by tags).
 * You **cannot search the object** metadata or object tags. Instead, you must use an external DB as a search index such as DynamoDB.
 
-
-
 ### References
 
 AWS. _Uploading and copying objects using multipart upload_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html)>. Acesso em: 22 set. 2023a.
@@ -208,4 +195,4 @@ AWS. _Configuring fast, secure file transfers using Amazon S3 Transfer Accelerat
 
 HUNT, Randall. _S3 Select and Glacier Select – Retrieving Subsets of Objects_. AWS Blog, 2017. Disponível em: <[https://aws.amazon.com/blogs/aws/s3-glacier-select/](https://aws.amazon.com/blogs/aws/s3-glacier-select/)>. Acesso em: 22 set. 2023.
 
-PATEL, Harshil. _Query S3 with SQL using S3 Select_. Arctype, 2021. Disponível em: <[https://arctype.com/blog/s3-select/](https://arctype.com/blog/s3-select/)>. Acesso em: 22 set. 2023.&#x20;
+PATEL, Harshil. _Query S3 with SQL using S3 Select_. Arctype, 2021. Disponível em: <[https://arctype.com/blog/s3-select/](https://arctype.com/blog/s3-select/)>. Acesso em: 22 set. 2023.

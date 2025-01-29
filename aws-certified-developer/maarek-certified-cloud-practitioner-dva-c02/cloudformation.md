@@ -40,7 +40,7 @@
 
 Templates components:
 
-* Resources: your AWS resources declared in the template (MANDATORY).&#x20;
+* Resources: your AWS resources declared in the template (MANDATORY).
 * Parameters: the dynamic inputs for your template.
 * 3\. Mappings: the static variables for your template.
 * 4\. Outputs: References to what has been created.
@@ -57,8 +57,8 @@ Templates components:
 
 All the resources can be found here:
 
-* &#x20;http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aw s-template-resource-type-ref.html
-* Example here (for an EC2 instance):&#x20;
+* http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aw s-template-resource-type-ref.html
+* Example here (for an EC2 instance):
   * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html
   * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/awsproperties-ec2-instance.html
   * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/awsproperties-ec2-security-group.html
@@ -80,7 +80,7 @@ Parameters:
     ParameterProperty: value
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ```yaml
 Parameters:
@@ -118,9 +118,7 @@ Resources:
 
 Pseudo parameters are parameters that are predefined by AWS CloudFormation. You don't declare them in your template. Use them the same way as you would a parameter, as the argument for the `Ref` function (AWS, 2023a).
 
-
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
 
 ### CloudFormation - Mappings
 
@@ -169,8 +167,6 @@ Resources:
 
 The `FindInMap` function specifies key as the region where the stack is created (using the [AWS::Region pseudo parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html)) and `HVM64` as the name of the value to map to.
 
-
-
 ```yaml
   Parameters: 
     EnvironmentType: 
@@ -216,7 +212,7 @@ Outputs:
       Name: Name of resource to export
 ```
 
-* Value (required):  The value of the property returned by the `aws cloudformation describe-stacks` command. The value of an output can include literals, parameter references, pseudo-parameters, a mapping value, or intrinsic functions (AWS, 2023b) .
+* Value (required): The value of the property returned by the `aws cloudformation describe-stacks` command. The value of an output can include literals, parameter references, pseudo-parameters, a mapping value, or intrinsic functions (AWS, 2023b) .
 * Export (optional): The name of the resource output to be exported for a [cross-stack reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-crossstackref.html) (AWS, 2023b).
 
 ```yaml
@@ -258,7 +254,7 @@ Resources:
 ### CloudFormation - Conditions
 
 * Conditions are used to control the creation of resources or outputs based on a condition.
-* Conditions can be whatever you want them to be, but common ones are:&#x20;
+* Conditions can be whatever you want them to be, but common ones are:
   * Environment (dev / test / prod).
   * AWS Region.
   * Any parameter value.
@@ -272,8 +268,8 @@ Conditions:
 * The intrinsic function (logical) can be any of the following.
   * `Fn::And`
   * `Fn::Equals`
-  * `Fn::If`&#x20;
-  * `Fn::Not`&#x20;
+  * `Fn::If`
+  * `Fn::Not`
   * `Fn::Or`
 
 #### Using a Conditions
@@ -333,8 +329,8 @@ Resource:
 #### Fn::Join
 
 * Join values with a delimiter
-  * !Join **\[**delimiter, \[_comma-delimited list of values_] **]**
-* **Example: "a:b:c"**
+  * !Join \*\*\[\*\*delimiter, \[_comma-delimited list of values_] **]**
+* **Example: "a**:b:**c"**
   * !Join \[":", \[a,b,c]]
 
 #### Fn::Sub
@@ -365,15 +361,11 @@ Name: !Sub
   - Domain: !Ref RootDomainName
 ```
 
-
-
 **Example `Fn::`**`Sub` **without a mapping**
 
 * The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` pseudo parameters and the `vpc` resource logical ID to create an Amazon Resource Name (ARN) for a VPC.
 
 _!Sub 'arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:vpc/${vpc}'_
-
-
 
 **Example inline `!Sub` usage**
 
@@ -388,19 +380,16 @@ Outputs:
 
 ### CloudFormation - Rollbacks
 
-*   Stack Creation Fails:
-
-    * :warning: :warning::warning: **Default:** everything rolls back (gets deleted). We can look at the log.
-    * Option to disable rollback and troubleshoot what happened.
-
-
+* Stack Creation Fails:
+  * :warning: :warning::warning: **Default:** everything rolls back (gets deleted). We can look at the log.
+  * Option to disable rollback and troubleshoot what happened.
 * Stack Update Fails
   * The stack automatically rolls back to the previous known working state.
   * Ability to see in the log what happened and error messages.
 
 ### CloudFormation - Stack Notifications
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 

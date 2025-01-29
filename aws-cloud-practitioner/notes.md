@@ -2,7 +2,7 @@
 
 ### Comparison IaaS, PaaS, SaaS and On-Premises
 
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption><p>Font: PIPER; CLINTON, 2019</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (123).png" alt=""><figcaption><p>Font: PIPER; CLINTON, 2019</p></figcaption></figure>
 
 ### Cloud Deployment Types
 
@@ -148,7 +148,7 @@ But where can you find authoritative answers? **AWS Artifact**
 * Single consolidated bill
 * SCPs (Service Control Policies)
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (124).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 ### AWS Control Tower
 
@@ -197,12 +197,9 @@ Excellent solution if you are:
   * service limits (50).
 *   **Enterprise Plans**
 
-    * Concierge Support Team\
+    * Concierge Support Team\\
 
-
-
-
-    <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: </p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (125).png" alt=""><figcaption><p>Font:</p></figcaption></figure>
 
 ### Key Networking Terms
 
@@ -217,10 +214,9 @@ Excellent solution if you are:
 * Application LB
 * Network LB
 *   Gateway LB\
-    \
+    \\
 
-
-    <figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (127).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 > Usually, the target of an ELB is a public subnet that is auto scaling instances.
 
@@ -232,7 +228,7 @@ AWS’s DNS web service. Route 53 effectively connects user requests to infrastr
 
 Is a Content Delivery Network (CDN).
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (128).png" alt=""><figcaption><p>Font: SHANNON, 2023</p></figcaption></figure>
 
 #### AWS Direct Connect
 
@@ -323,7 +319,7 @@ Amazon Elastic File System (EFS) is a fully managed, cloud-based file storage se
 
 **Main AWS Service: Storage Gateway**
 
-AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud storage (AWS, 2023b).&#x20;
+AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud storage (AWS, 2023b).
 
 Storage Gateway supports four key hybrid cloud use cases: move backups and archives to the cloud, reduce on-premises storage with cloud-backed file shares, provide on-premises applications low-latency access to data stored in AWS, and data lake access for pre and post-processing workflows (AWS, 2023b).
 
@@ -331,7 +327,7 @@ Storage Gateway supports four key hybrid cloud use cases: move backups and archi
 
 #### Database Comparisons
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html">AWS's Page</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (130).png" alt=""><figcaption><p>Font: <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html">AWS's Page</a></p></figcaption></figure>
 
 #### AuroraDB
 
@@ -360,8 +356,6 @@ Storage Gateway supports four key hybrid cloud use cases: move backups and archi
 ### AWS CloudTrail
 
 CloudTrail, customers can log, con\&nuously monitor, and retain account ac\&vity related to all API calls across the AWS infrastructure.
-
-
 
 ### References
 

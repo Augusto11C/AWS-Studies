@@ -16,7 +16,7 @@
 
 **VPC Diagram**
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (199).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Internet Gateway & NAT Gateways
 
@@ -24,7 +24,7 @@
 * Public Subnets have a **route** to the internet gateway.
 * • NAT Gateways (AWS-managed) & NAT Instances (self-managed) allow your instances in your Private Subnets to access the internet while remaining private.
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Network ACL & Security Groups
 
@@ -38,9 +38,7 @@
   * Can have only ALLOW rules.
   * Rules include IP addresses and other security groups.
 
-<figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (201).png" alt=""><figcaption><p>Font: AWS, 2023a</p></figcaption></figure>
 
 ### VPC Flow Logs
 
@@ -55,11 +53,9 @@
 * Captures network information from AWS managed interfaces too: Elastic Load Balancers, ElastiCachem RDS, Aurora, etc...
 * VPC Flow logs data can go to S3, CloudWatch Logs, and Kinesis Data Firehose.
 
-
-
 ### VPC Peering
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (202).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Connect two VPC, privately using AWS’ network.
 * Make them behave as if they were in the same network.
@@ -74,7 +70,7 @@
 * VPC Endpoint Interface: the rest.
 * **Note: Only used within your VPC.**
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (203).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Site to Site VPN & Direct Connect
 
@@ -83,14 +79,14 @@
   * The connection is automatically encrypted.
   * Goes over the public internet.
 * Direct Connect (DX)
-  * Establish a physical connection between on- premises and AWS.&#x20;
+  * Establish a physical connection between on- premises and AWS.
   * The connection is private, secure and fast.
   * Goes over a private network.
   * Takes at least a month to establish.
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (204).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-### Summary&#x20;
+### Summary
 
 * VPC: Virtual Private Cloud.
 * Subnets: Tied to an AZ, network partition of the VPC.
@@ -106,5 +102,4 @@
 
 ### References
 
-AWS. _Internetwork traffic privacy in Amazon VPC_. Amazon Web Services. Disponível em: [https://docs.aws.amazon.com/vpc/latest/userguide/VPC\_Security.html](https://docs.aws.amazon.com/vpc/latest/userguide/VPC\_Security.html). Acesso em: 17 set. 2023a.
-
+AWS. _Internetwork traffic privacy in Amazon VPC_. Amazon Web Services. Disponível em: [https://docs.aws.amazon.com/vpc/latest/userguide/VPC\_Security.html](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html). Acesso em: 17 set. 2023a.

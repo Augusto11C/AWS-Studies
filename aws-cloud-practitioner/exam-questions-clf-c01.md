@@ -16,10 +16,7 @@ D
 
 </details>
 
-
-
-Which pillar of the AWS Well-Architected Framework refers to the ability of a system to recover from infrastructure or service disruptions and dynamically acquire computing resources to meet demand?\
-
+Which pillar of the AWS Well-Architected Framework refers to the ability of a system to recover from infrastructure or service disruptions and dynamically acquire computing resources to meet demand?\\
 
 * A. Security
 * B. Reliability
@@ -34,8 +31,6 @@ B
 
 </details>
 
-
-
 3. Which of the following are benefits of migrating to the AWS Cloud? (Choose two.)
 
 * A. Operational resilience
@@ -48,13 +43,9 @@ B
 
 <summary>Answer</summary>
 
-
-
 A and C
 
 </details>
-
-
 
 A company is planning to replace its physical on-premises compute servers with AWS serverless compute services. The company wants to be able to take advantage of advanced technologies quickly after the migration.\
 Which pillar of the AWS Well-Architected Framework does this plan represent?
@@ -72,8 +63,6 @@ B
 
 </details>
 
-
-
 A large company has multiple departments. Each department has its own AWS account. Each department has purchased Amazon EC2 Reserved Instances. Some departments do not use all the Reserved Instances that they purchased, and other departments need more Reserved Instances than they purchased. The company needs to manage the AWS accounts for all the departments so that the departments can share the Reserved Instances. Which AWS service or tool should the company use to meet these requirements?
 
 * A. AWS Systems Manager
@@ -88,8 +77,6 @@ A large company has multiple departments. Each department has its own AWS accoun
 D
 
 </details>
-
-
 
 Which component of the AWS global infrastructure is made up of one or more discrete data centers that have redundant power, networking, and connectivity?
 
@@ -108,8 +95,6 @@ An Availability Zone is a single data center or a group of data centers within a
 
 </details>
 
-
-
 Which duties are the responsibility of a company that is using AWS Lambda? (Choose two.)
 
 * A. Security inside of code
@@ -125,8 +110,6 @@ Which duties are the responsibility of a company that is using AWS Lambda? (Choo
 A and D
 
 </details>
-
-
 
 Which AWS services or features provide disaster recovery solutions for Amazon EC2 instances? (Choose two.)
 
@@ -146,11 +129,7 @@ The **AMI** is created from snapshots of your instance's root volume and any oth
 
 Amazon **EBS** allows the creation of snapshots, which are point-in-time copies of EBS volumes. By taking regular snapshots of EBS volumes attached to EC2 instances, companies can create backups that can be used to restore data or launch new instances in the event of a disaster. Snapshots are stored durably and can be easily restored when needed.
 
-
-
 </details>
-
-
 
 A company is migrating to the AWS Cloud instead of running its infrastructure on premises.\
 Which of the following are advantages of this migration? (Choose two.)
@@ -169,8 +148,6 @@ B and C
 
 </details>
 
-
-
 A user is comparing purchase options for an application that runs on Amazon EC2 and Amazon RDS. The application **cannot sustain any interruption**. The application experiences a predictable amount of usage, including some seasonal spikes that last only a few weeks at a time. It is not possible to modify the application.\
 Which purchase option meets these requirements MOST cost-effectively?
 
@@ -186,8 +163,6 @@ Which purchase option meets these requirements MOST cost-effectively?
 C
 
 </details>
-
-
 
 A company plans to create a data lake that uses Amazon S3.\
 Which factor will have the MOST effect on cost?
@@ -205,8 +180,6 @@ A
 
 </details>
 
-
-
 Which AWS service or feature can a company use to determine which business unit is using specific AWS resources?
 
 * A. Cost allocation tags
@@ -222,11 +195,7 @@ A
 
 [Cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) are a mechanism provided by AWS to assign metadata to AWS resources for cost tracking and categorization purposes.
 
-
-
 </details>
-
-
 
 Which of the following are components of an AWS Site-to-Site VPN connection? (Choose two.)
 
@@ -244,8 +213,6 @@ B and D
 
 </details>
 
-
-
 A company needs to establish a connection between two VPCs. The VPCs are located in two different AWS Regions. The company wants to use the existing infrastructure of the VPCs for this connection. Which AWS service or feature can be used to establish this connection?
 
 * A. AWS Client VPN
@@ -260,8 +227,6 @@ A company needs to establish a connection between two VPCs. The VPCs are located
 B
 
 </details>
-
-
 
 According to the AWS shared responsibility model, what responsibility does a customer have when using Amazon RDS to host a database?
 
@@ -279,8 +244,6 @@ A
 Not C (Design encryption-at-rest strategies): Amazon RDS offers encryption-at-rest for database storage by default. It handles the encryption of data on disk and manages the associated keys. As a customer, you can enable encryption when creating an Amazon RDS instance, but you don't need to design the encryption strategy yourself.
 
 </details>
-
-
 
 A user needs to determine whether an Amazon EC2 instance's security groups were modified in the last month.\
 How can the user see if a change was made?
@@ -300,8 +263,7 @@ AWS CloudTrail provides a history of events for an AWS account, including API ca
 
 </details>
 
-Which of the following are included in AWS Enterprise Support? (Choose two.)\
-
+Which of the following are included in AWS Enterprise Support? (Choose two.)\\
 
 * A. AWS technical account manager (TAM)
 * B. AWS partner-led support
@@ -316,8 +278,6 @@ Which of the following are included in AWS Enterprise Support? (Choose two.)\
 A and D
 
 </details>
-
-
 
 A global media company uses AWS Organizations to manage multiple AWS accounts.\
 Which AWS service or feature can the company use to limit the access to AWS services for member accounts?
@@ -337,8 +297,6 @@ AWS Organizations helps to manage multiple AWS accounts in a centralized manner.
 
 </details>
 
-
-
 A company wants to limit its employees' AWS access to a portfolio of predefined AWS resources.\
 Which AWS solution should the company use to meet this requirement?
 
@@ -357,8 +315,6 @@ AWS Service Catalog is a service that allows organizations to create and manage 
 
 </details>
 
-
-
 A company is developing a mobile app that needs a high-performance NoSQL database.\
 Which AWS services could the company use for this database? (Choose two.)
 
@@ -374,13 +330,9 @@ Which AWS services could the company use for this database? (Choose two.)
 
 D and E
 
-
-
 Amazon DocumentDB is a fully managed, highly scalable, and highly available document database service that is compatible with MongoDB.
 
 </details>
-
-
 
 According to AWS, what is the benefit of Elasticity?
 
@@ -397,12 +349,10 @@ B
 
 </details>
 
-
-
 What is the AWS feature that enables fast, easy and secure transfers of files over long distances between your client and your Amazon S3 bucket?
 
-* **A.** File Transfer&#x20;
-* **B.** HTTP Transfer&#x20;
+* **A.** File Transfer
+* **B.** HTTP Transfer
 * **C.** Amazon S3 Transfer Acceleration
 * **D.** S3 Acceleration
 
@@ -415,8 +365,6 @@ C
 Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
 
 </details>
-
-
 
 Which of the following services allows you to analyze EC2 Instances against pre-defined security templates to check for vulnerabilities?
 
@@ -435,8 +383,6 @@ Amazon Inspector enables you to analyze the behavior of your AWS resources and h
 
 </details>
 
-
-
 A website for an international sport governing body would like to serve its content to viewers from different parts of the world in their vernacular language. Which of the following services provide location-based web personalization using geolocation headers?
 
 * **A.** Amazon CloudFront
@@ -454,20 +400,15 @@ Amazon CloudFront supports country-level location-based web content personalizat
 
 You can configure CloudFront to add additional geolocation headers that provide more granularity in your caching and origin request policies. The new headers give you more granular control of cache behavior and your origin access to the viewer’s country name, region, city, postal code, latitude, and longitude, all based on the viewer’s IP address.
 
-
-
-![](<../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1) (1).png>)\
-
+![](<../.gitbook/assets/image (152).png>)\\
 
 </details>
 
-
-
 A company wants to utilize AWS storage. For them, low storage cost is paramount. The data is rarely retrieved and a data retrieval time of 13-14 hours is acceptable for them. What is the best storage option to use?
 
-* A. Amazon S3 Glacier&#x20;
-* B. S3 Glacier Deep Archive&#x20;
-* C. Amazon EBS volumes&#x20;
+* A. Amazon S3 Glacier
+* B. S3 Glacier Deep Archive
+* C. Amazon EBS volumes
 * D. AWS CloudFront
 
 <details>
@@ -476,11 +417,9 @@ A company wants to utilize AWS storage. For them, low storage cost is paramount.
 
 B
 
-![](<../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1).png>)
+<img src="../.gitbook/assets/image (153).png" alt="" data-size="original">
 
 </details>
-
-
 
 ### References
 

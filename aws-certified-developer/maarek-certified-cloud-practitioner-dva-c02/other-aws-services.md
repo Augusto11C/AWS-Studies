@@ -89,7 +89,7 @@ The key points about the Federated Query feature in Amazon Athena:
 
 #### Amazon MSK Consumers
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (269).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Kinesis Data Analytics for Apache Flink:** You can use a Flink Application to read directly from the MSK cluster.
 * **Glue for Streaming ETL Jobs:** Glue can be used to perform streaming ETL jobs, which are powered by Apache Spark Streaming.
@@ -101,7 +101,7 @@ The key points about the Federated Query feature in Amazon Athena:
 * Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS.
 * Macie helps identify and alert you to sensitive data, such as personally identifiable information (PII)
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (270).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### AWS AppConfig
 
@@ -115,11 +115,11 @@ The key points about the Federated Query feature in Amazon Athena:
   * JSON Schema for syntactic checks, or
   * Lambda Function to run code for semantic checks. This ensures that your configurations are both syntactically and semantically correct before they are deployed. This should provide a comprehensive understanding of AWS AppConfig.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (271).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudWatch Evidently
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (272).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Feature Validation:** CloudWatch Evidently allows you to safely validate new features by serving them to a specified percentage of your users.
 * **Risk Reduction:** It helps reduce risk and identify unintended consequences of new features.

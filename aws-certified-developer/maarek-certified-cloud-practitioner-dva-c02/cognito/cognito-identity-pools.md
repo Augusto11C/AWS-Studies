@@ -11,7 +11,7 @@
 * Once the users have obtained these AWS credentials, they **can access the AWS services directly with an API call using an SDK or through the API gateway**.
 * These credentials that the users get have an IAM policy that is defined by what we do in Cognito Identity Pools and they can be customized based on the value of the user ID for fine-grained control.
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (276).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Access to our private S3 Bucket and a DynamoDB Table is desired by web and mobile applications.
 * The first step is to ensure that users get credentials of AWS, but the creation of IAM users for these applications is not desired.
@@ -29,12 +29,10 @@
 * **Role selection based on user’s ID**: Rules can be defined to assign specific roles to each user, based on their unique ID. This allows for fine-grained access control and enhances security.
 * **Partitioning user access**: By using <mark style="color:green;">**policy variables**</mark>, you can partition your users’ access to AWS resources. This means you can control which users have access to what resources, providing a high level of customization and security.
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (277).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Obtaining IAM credentials**: Cognito Identity Pools obtain IAM credentials through the AWS Security Token Service (STS). This service provides temporary security credentials that applications can use to make AWS requests.
 * **Trust policy of Cognito Identity Pools**: The IAM roles associated with your Cognito Identity Pool must have a “trust” policy for the identity pool. This policy allows the identity pool to assume the necessary roles and provide the appropriate permissions.
-
-
 
 ### Questions
 
@@ -53,7 +51,6 @@ Amazon Cognito leverages IAM roles to generate temporary credentials for your ap
 
 In this example the Developer must limit access to specific identities in the SAML directory. The Developer can create a trust policy with an IAM condition key that limits access to a specific set of app users by checking the value of cognito-identity.amazonaws.com:sub:
 
-\
+\\
 
-
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (273).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>

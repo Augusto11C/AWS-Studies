@@ -1,6 +1,6 @@
 # AWS Cloud Development Kit (CDK)
 
-<figure><img src="../../.gitbook/assets/image (171).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (334).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **What is AWS CDK?** AWS CDK allows you to define your cloud infrastructure in a familiar programming language such as JavaScript, TypeScript, Python, Java, or .NET. It’s a tool that supersedes CloudFormation.
 * **How does it work?** You define your infrastructure using constructs, which are high-level components provided by the CDK. For example, you can define a VPC, an ECS cluster, and an application load-balanced Fargate service using TypeScript. If the code compiles successfully, it is then synthesized into a CloudFormation template in either JSON or YAML format.

@@ -19,7 +19,7 @@
   * Continuous backups and restore to specific timestamp (point in time restore).
   * Monitoring dashboards.
   * **Read replicas** for improved read performance.
-  * **Multi AZ setup** for  disaster recovery.
+  * **Multi AZ setup** for disaster recovery.
   * Maintenance windows for upgrades.
   * Scaling capability (vertical and horizontal).
   * Storage backed by EBS (gp2 or io1).
@@ -48,7 +48,7 @@
 * Replicas can be promoted to their own DB.
 * Applications must updated the connection string to leverage read replicas.
 
-<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (160).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### RDS Read Replicas - Use Cases
 
@@ -57,13 +57,13 @@
 3. You create a Read Replica to run the new workload there.
 4. The production application is unaffected.
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (161).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### RDS Read Replicas - Network Cost :money\_with\_wings:
 
 * :exclamation: For RDS Read Replicas within the same region, you don’t pay the fee where data goes from one AZ to another.
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### RDS Multi AZ (Disaster Recovery)
 
@@ -71,7 +71,7 @@
 * One DNS name - It helps to automatically failover to the standby version in case of the mater db fails.
 * **NOT USED FOR SCALING**
 
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (163).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * When it is used?
   * Failover in case of loss of AZ.
@@ -79,19 +79,17 @@
 
 #### RDS - From Single AZ to Multi-AZ
 
-* &#x20;Zero downtime operation (no need to stop the DB.
+* Zero downtime operation (no need to stop the DB.
 * Just click on “modify” for the database.
-* The following happens internally:&#x20;
+* The following happens internally:
   * A snapshot is taken.
-  * &#x20;A new DB is restored from the snapshot in a new AZ.
+  * A new DB is restored from the snapshot in a new AZ.
   * Synchronization is established between the two databases.
 
 ### Amazon Aurora
 
 * **Proprietary Technology:** Aurora is a proprietary technology developed by AWS and is not open sourced.
-*   **Database Engine Support:** Aurora supports both Postgres and MySQL as Aurora DB, allowing your existing drivers to work seamlessly as if Aurora were a Postgres or MySQL database.
-
-
+* **Database Engine Support:** Aurora supports both Postgres and MySQL as Aurora DB, allowing your existing drivers to work seamlessly as if Aurora were a Postgres or MySQL database.
 * **Performance:** Aurora is designed to be "AWS cloud-optimized" and offers significant performance improvements compared to MySQL on RDS, with a claimed 5x performance boost, and over 3x the performance of Postgres on RDS.
 * **Storage Scalability:** Aurora's storage automatically grows in increments of 10GB, scaling up to an impressive 128TB of data.
 * **Replication:** Aurora supports up to 15 read replicas, and its replication process is faster than traditional MySQL, with sub-10 ms replica lag.
@@ -114,21 +112,21 @@
 * **Cross-Region Replication:**
   * Aurora offers support for Cross Region Replication, allowing you to replicate your Aurora database to a different AWS region for disaster recovery, data locality, or other purposes. This feature enhances the database's resilience and availability.
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (164).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Aurora DB Cluster
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (165).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 > Now that you have auto-scaling, it can be difficult for your application to keep track of where are your read replicas. What is the URL for the newest read replicas. How do I connect to them?
 >
-> To solve these problems there is the **Reader Endpoint. A Reader Endpoint has exactly the same feature as a Writer Endpoint. It helps with connection load balancing by automatically connecting to all the Read Replicas.** So every time the client connects to the reader endpoints, it will get connected to one of the read replicas and there will be load balancing done this way. Note that the load balancing happens at the connection level, not the statement level.&#x20;
+> To solve these problems there is the **Reader Endpoint. A Reader Endpoint has exactly the same feature as a Writer Endpoint. It helps with connection load balancing by automatically connecting to all the Read Replicas.** So every time the client connects to the reader endpoints, it will get connected to one of the read replicas and there will be load balancing done this way. Note that the load balancing happens at the connection level, not the statement level.
 >
 > by MAAREK, 2023.
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (166).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (167).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Aurora's Features
 
@@ -156,8 +154,6 @@
 <details>
 
 <summary>More about "<strong>Reduced RDS &#x26; Aurora failover time by up 66%".</strong></summary>
-
-
 
 1. **Connecting to the Main RDS Database Instance:**
    * In a typical RDS setup, applications connect directly to the main RDS database instance. This direct connection means that the applications are aware of the specific database instance they are connecting to.
@@ -226,7 +222,7 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 * Helps relieve load in RDS.
 * Cache must have an invalidation strategy to make sure only the most current data is used in there.
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (168).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### ElastiCache Solution Architecture - User Session Store
 
@@ -234,9 +230,9 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 * The application writes the session data into ElastiCache.
 * The user hits another instance of our application.
 * The instance retrieves the data and the user is already logged in.
-* Note: By doing this, your application became stateless.&#x20;
+* Note: By doing this, your application became stateless.
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### ElastiCache Redis vs. Memcached (MAAREK, 2023)
 
@@ -258,7 +254,7 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
   * Anti-pattern: data changing rapidly, all large key space frequently needed.
 * **Is data structured well for caching?**
   * example: key value caching, or caching of aggregations result.
-* Cache Patterns:&#x20;
+* Cache Patterns:
   * Lazy Loading/ Cache-Aside/ Lazy Population.
   * Write Through.
 
@@ -269,9 +265,9 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 | Only requested data is cached (the cache is not filled up with unused data). | Cache miss penalty that results in 3 roud trips (noticeable delay for that request). |
 | Node failures are not fatal (just increased latency to warm the cache).      | Stale data: Data can be updated in the database and outdatd in the cache.            |
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-#### Cache Pattern: Write Through&#x20;
+#### Cache Pattern: Write Through
 
 * Add or Update cache when database is updated.
 
@@ -280,7 +276,7 @@ To address this problem, RDS Proxy can be used. The RDS Proxy acts as an interme
 | Data in cache is never stale, reads are quick. | Write penalty (each write requires 2 calls).                                                                 |
 |                                                | Missing data until it is added/updated in the DB (mitigation is to implement lazy loading strategy as well). |
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (171).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Cache Evictions and Time-to-live (TTL)
 
@@ -303,12 +299,12 @@ Cache Evictions, Scale up or out your elasticCache redis Cluster
 ### Amazon MemoryDB for Redis.
 
 * Redis-compatible, **durable**, in-memory database service.
-* The main difference between Redis and MemoryDB for Redis, is that while Redis is intent to be used as a cache DB with some durability, **MemoryDB is really a database** that has a Redis compatible API**.**
+* The main difference between Redis and MemoryDB for Redis, is that while Redis is intent to be used as a cache DB with some durability, **MemoryDB is really a database** that has a Redis compatible API\*\*.\*\*
 * **It is in-memory DB, but it's durable data storage with Multi-AZ transaction log.**
   * "Multi-AZ transaction log" refers to the mechanism MemoryDB uses to replicate changes made to the data across these Availability Zones. The transaction log records and replicates all data modifications, ensuring data consistency and minimizing the risk of data loss in the event of an AZ failure.
-  * See more about what is transaction logs in this note: [Database Concepts](https://app.gitbook.com/s/uBtdKjBB6wlw1AXXdtRP/database-concepts "mention")
+  * See more about what is transaction logs in this note: [Database Concepts](https://app.gitbook.com/s/uBtdKjBB6wlw1AXXdtRP/ "mention")
 
-While Amazon ElastiCache for Redis is a managed version of Redis, an in-memory data store used mainly for caching,Amazon MemoryDB for Redis aims to replace both cache and database in one component.&#x20;
+While Amazon ElastiCache for Redis is a managed version of Redis, an in-memory data store used mainly for caching,Amazon MemoryDB for Redis aims to replace both cache and database in one component.
 
 MemoryDB also supports multi-AZ availability with up to 5 replicas in different AZs.
 
@@ -316,8 +312,8 @@ It offers strong consistency on the primary node, eventual consistency reads on 
 
 Use case: If your workload requires a durable database that provides ultra-fast performance, you should consider using Amazon MemoryDB for Redis.
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (174).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Reference
 
-* AWS. _Working with storage for Amazon RDS DB instances_. Amazon Web Services. Disponível em: [https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_PIOPS.StorageTypes.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_PIOPS.StorageTypes.html#USER\_PIOPS.Autoscaling). Acesso em: 11 set. 2023a.
+* AWS. _Working with storage for Amazon RDS DB instances_. Amazon Web Services. Disponível em: [https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_PIOPS.StorageTypes.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling). Acesso em: 11 set. 2023a.

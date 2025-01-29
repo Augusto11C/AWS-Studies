@@ -1,6 +1,6 @@
 # DynamoDB
 
-* Fully managed, highly available with replication across multiple AZs.&#x20;
+* Fully managed, highly available with replication across multiple AZs.
 * NoSQL database - not a relational database.
 * Scales to massive workloads, distributed database.
 * Millions of requests per seconds, trillions of row, 100s of TB of storage.
@@ -22,8 +22,6 @@
   * **Document Types** - List, Map.
   * **Set Types** - String Set, Number Set, Binary Set.
 
-
-
 ### DynamoDB - Primary Keys
 
 #### Partition Key (HASH)
@@ -31,7 +29,7 @@
 * Partition key must be unique for each item.
 * Partition key must be “diverse” so that the data is distributed.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (296).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Partition Key + Sort Key (HASH + RANGE)
 
@@ -39,7 +37,7 @@
 * Data is grouped by partition key.
 * Example: users-games table, “User\_ID” for Partition Key and “Game\_ID” for Sort Key.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (297).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Read/Write Capacity Modes
 
@@ -59,11 +57,11 @@ Note: You can switch between different modes once every 24 hours.
 
 **Console - Provisioned Mode With Auto Scaling Enabled**
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (293).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Console - Provisioned Mode With Auto Scaling Disabled**
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (295).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### On-Demand Mode
 
@@ -84,7 +82,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Write Capacity Unit (WCU) represents one write per second for an item up to 1 KB in size.
 * If the items are larger than 1 KB, more WCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (290).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB Strongly Consistent Read vs. Eventually Consistent Read.
 
@@ -100,7 +98,7 @@ Note: You can switch between different modes once every 24 hours.
 * One Read Capacity Unit (RCU) represents one Strongly Consistent Read (SCR) per second, or two Eventually Consistent Reads (ECR) per second, for an item up to 4 KB in size.
 * If the items are larger than 4 KB, more RCUs are consumed.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (292).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Calculation involving Eventually Consistent Reads: ECR/2 \* ItemSize/4KB.
 * Calculation involving Strongly Consistent Read: SCR \* ItemSize/4KB
@@ -114,7 +112,7 @@ Note: You can switch between different modes once every 24 hours.
 * :warning: :warning: :warning: :warning: :warning: :warning: If you have 10 partitions, and you provide a new provision with 10 **WCUs** and 10 **RCUs**, then they're going to be spread evenly across partitions.
   * The even distribution of capacity ensures that the workload is spread across the partitions, preventing hotspots where certain partitions become overloaded with requests while others remain underutilized. DynamoDB's automatic partition management takes care of distributing the data and load balancing the requests to provide optimal performance and scalability.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (291).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Throttling
 
@@ -171,7 +169,7 @@ Note: You can switch between different modes once every 24 hours.
   * Multiple workers scan multiple data segments at the same time.
   * Increases the throughput and RCU consumed.
   * Limit the impact of parallel scans just like you would for Scans.
-* Can use ProjectionExpression & FilterExpression ( :warning: **no changes to RCU**).&#x20;
+* Can use ProjectionExpression & FilterExpression ( :warning: **no changes to RCU**).
 
 ### DynamoDB - Deleting Data (Scan)
 
@@ -220,15 +218,15 @@ PartiQL is a SQL-compatible query language for DynamoDB that allows one to perfo
 
 **Example: Update Item**
 
-<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (298).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Example: Delete Item**
 
-<figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (299).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 **Example: String Comparisons**
 
-<figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (300).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Do Not Overwrite Elements While Performing Writing Operation
 
@@ -247,18 +245,20 @@ PartiQL is a SQL-compatible query language for DynamoDB that allows one to perfo
 
 #### Use Case Example (Be a Better Dev, 2019b)
 
-* Given the table below:
-  *
+*   Given the table below: \*
 
-      <figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
-  * Give me all the rows where: `OriginCountry == "Germany"`.
-  * **Not Ideal Approach:**
-    * Scan + FilterExpression("OriginCountry == "Germany").
-    * This approach is going to check each one of the rows in this DynamoDB table and it will verify if the if OriginCountry == "Germany".
-    * This approach is not scalable when your table has millions of rows.
-  * **GSI Approach:**
-    * Make a GSI of OriginCountry.
-    * Feach "Germany" with one lookup.
+    ```
+    <figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
+    ```
+
+    * Give me all the rows where: `OriginCountry == "Germany"`.
+    * **Not Ideal Approach:**
+      * Scan + FilterExpression("OriginCountry == "Germany").
+      * This approach is going to check each one of the rows in this DynamoDB table and it will verify if the if OriginCountry == "Germany".
+      * This approach is not scalable when your table has millions of rows.
+    * **GSI Approach:**
+      * Make a GSI of OriginCountry.
+      * Feach "Germany" with one lookup.
 
 {% code overflow="wrap" %}
 ```java
@@ -272,19 +272,19 @@ DynamoDBQueryExpression<Account> q = new DynamoDBQueryExpression<Account>()
 #### How Does GSI Work?
 
 * You as a user define a GSI Index - This involves selecting a new Partition Key.
-* :warning: :warning:  Creating a GSI **CLONES** your primary table using your new Partition Key, but keeps these two tables in sync.
+* :warning: :warning: Creating a GSI **CLONES** your primary table using your new Partition Key, but keeps these two tables in sync.
 
-<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (306).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (308).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (147).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (310).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (311).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (307).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (139).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (302).png" alt=""><figcaption><p>Font: Be a Better Dev, 2019b</p></figcaption></figure>
 
 * GSI Partition Key Requires Uniform Data Distribution.
 * :warning::warning: Define RCU/WCU Capacity separately on the index.
@@ -328,7 +328,7 @@ Here's how it works:
 * Only when the client-side object version matches the corresponding version number of the item in the DynamoDB table do your update or delete requests succeed.
 * A ConditionalCheckFailedException is thrown if there’s a mismatch.
 
-<figure><img src="../../.gitbook/assets/image (149).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (312).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB Accelerator (DAX)
 
@@ -337,24 +337,33 @@ Here's how it works:
 * There’s no need for application logic modification as it’s compatible with existing DynamoDB APIs.
 * It addresses the “Hot Key” problem, which occurs when there are too many reads.
   * :warning::warning::warning:**The hot key problems are addressed by DAX. Throttling on your RCU's may occur if a very specific key or item is read too many times. However, this problem is mitigated if the item is cached by DAX.**
-* The Time to Live (TTL) for cache is 5 minutes by default.
-  * Custom TTL -> Parameter Group.
-  *
+*   The Time to Live (TTL) for cache is 5 minutes by default.
 
-      <figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-  *
+    * Custom TTL -> Parameter Group.
+    *
 
-      <figure><img src="../../.gitbook/assets/image (154).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-  *
+    ```
+    <figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    ```
 
-      <figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    *
+
+    ```
+    <figure><img src="../../.gitbook/assets/image (154).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    ```
+
+    *
+
+    ```
+    <figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    ```
 * The cluster can have up to 10 nodes.
 * For production, a minimum of 3 nodes is recommended for Multi-AZ deployment.
 * It ensures security with features like Encryption at rest with KMS, VPC, IAM, and CloudTrail.
 
-<figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (313).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (152).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (315).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DAX vs. ElastiCache
 
@@ -366,7 +375,7 @@ ElastiCache is an in-memory data store provided by Amazon that supports popular 
 
 In summary, combining DAX and ElastiCache in your architecture allows you to benefit from DAX's caching capabilities for simple queries and leverage ElastiCache for more complex logic applications, reducing computational expenses and improving performance.
 
-<figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB Stream
 
@@ -395,7 +404,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 * (2) Custom logic can be added using a processing layer, such as a Kinesis Client Library App or a Lambda function.
   * Custom logic can include messaging, notifications using Amazon SNS, filtering, transformation, and reinserting data into DynamoDB, or sending data to OpenSearch using Lambda.
 
-<figure><img src="../../.gitbook/assets/image (156).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (319).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### DynamoDB Streams - Selective Data, Shards, and Stream Population
 
@@ -408,7 +417,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 * Shards are not provisioned by you; this process is automated by AWS.
 * After enabling a stream, records are not populated retroactively.
 
-<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (321).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### DynamoDB Streams & AWS Lambda
 
@@ -416,7 +425,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 * The appropriate permissions must be ensured for the Lambda function.
 * The Lambda function is invoked synchronously.
 
-<figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (320).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB TTL
 
@@ -452,7 +461,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 ### DynamoDB Operations
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (287).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Copying a DynamoDB Table (Option 1):
   * :warning::warning:\[Data Pipeline] The copying of a DynamoDB Table across accounts, regions, or places can be achieved through two options.
@@ -462,7 +471,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
       * In the second step, the data is read back from Amazon S3.
       * The data is then inserted back into a **new DynamoDB Table**.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (286).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB and S3
 
@@ -476,17 +485,16 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
   * Clients retrieve the metadata from DynamoDB and fetch the corresponding objects from Amazon S3.
   * This strategy can be scaled to handle multiple products.
   *   The combination of Amazon S3 and DynamoDB leverages the strengths of each service.\
-      \
+      \\
 
-
-      <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (288).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Another synergy between the two services is using DynamoDB to index S3 object metadata.
   * Objects are uploaded to Amazon S3, and a Lambda function stores their metadata in a DynamoDB table.
   * Querying the DynamoDB table is easier than querying an S3 bucket for building queries and retrieving specific information about the objects.
   * Examples of queries include finding objects by a specific timestamp, calculating total storage used by a customer, listing objects based on attributes, or finding objects uploaded within a date range.
   * The necessary objects are retrieved from the S3 bucket based on the results obtained from DynamoDB.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (289).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### DynamoDB - Security & Other Features
 
@@ -498,7 +506,7 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 **Backup and Restore feature available**
 
-* Point in time recovery (PITR) like RDS&#x20;
+* Point in time recovery (PITR) like RDS
 
 **Global tables**
 
@@ -510,22 +518,15 @@ In summary, combining DAX and ElastiCache in your architecture allows you to ben
 
 ### DynamoDB - Users Interact with DynamoDB Directly
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (284).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Using Web Identity Federation or Cognito Identity Pools, each user gets AWS credentials.
 * You can assign an IAM Role to these users with a Condition to limit their API access to DynamoDB.
 * LeadingKeys: limit row-level access for users on the Primary Key.
 * Attributes: limit specific attributes the user can see.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (285).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 
 Be a Better Dev. _What is a DynamoDB GSI (Global Secondary Index)_. \[Videoaula]. YouTube, 2019b. Disponível em: <[https://www.youtube.com/watch?v=ihMOlb8EZKE](https://www.youtube.com/watch?v=ihMOlb8EZKE)>. Acesso em: 8 out. 2023.
-
-
-
-
-
-
-

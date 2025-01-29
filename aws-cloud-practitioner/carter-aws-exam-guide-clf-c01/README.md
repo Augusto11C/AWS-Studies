@@ -27,7 +27,7 @@ In order to pass the AWS CCP Exam, a candidate will be expected to demonstrate t
 
 ### AWS CCP Domain
 
-* The exam is divided into **four different domains** ![](../../cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/ccp-domains.png)
+* The exam is divided into **four different domains** ![](../../.gitbook/assets/ccp-domains.png)
 * The number of questions of each section will generally follow the weighted distribution of content for the exam, so you will get more questions from some sections and fewer than others to reflect this.
 * Domain 1 - Cloud Concepts
   * It will introduce you to the AWS and the value it can bring to your organization
@@ -283,7 +283,7 @@ Cloud provider responsabilities:
 * hardware components
 * availability zones, edge locations
 
-Beyond the layers of physical facilities and computing hardware, there are differing levels of responsibility based upon the cloud services model employed. ![](../../cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/responsability-cloud-provider-cloud-customer-diagram.png)
+Beyond the layers of physical facilities and computing hardware, there are differing levels of responsibility based upon the cloud services model employed. ![](../../.gitbook/assets/responsability-cloud-provider-cloud-customer-diagram.png)
 
 The image above shows the areas of responsibility within a cloud implementation. The shaded areas represent the responsibility on the part of the cloud provider.
 
@@ -535,7 +535,7 @@ All Availability Zones within a region are separated physically but are still wi
 
 When you provision resources within AWS, you will select the region (e.g. eu-south-1), but then you will also select the Availability Zone within that region. This will be designated by a letter after the region, such as _eu-south-1**a**_.
 
-![](../../cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/aws-infrastructure.png)
+![](../../.gitbook/assets/aws-infrastructure.png)
 
 #### Edge Locations
 
@@ -553,11 +553,11 @@ Services That Use Edge:
 
 ## AWS Core Services Overview
 
-![](../../cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/aws-core-services-overview.png)
+![](../../.gitbook/assets/aws-core-services-overview.png)
 
 ## AWS Foundational Services
 
-![](../../cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01/foundational-services.png)
+![](../../.gitbook/assets/foundational-services.png)
 
 ### AWS Trusted Advisor
 

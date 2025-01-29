@@ -13,16 +13,16 @@
 * • IMDSv1 is accessing `http://169.254.169.254/latest/meta-data` directly.
 * • IMDSv2 is more secure and is done in two steps:
 * (1) Get Session Token (limited validity) – using headers & PUT:
-  * ![](<../../.gitbook/assets/image (94).png>)
+  * ![](<../../.gitbook/assets/image (218).png>)
 * (2) Use Session Token in IMDSv2 calls – using headers:
-  * ![](<../../.gitbook/assets/image (95).png>)
+  * ![](<../../.gitbook/assets/image (219).png>)
 
 ### MFA with CLI
 
 * To use MFA with the CLI, you must create a temporary session.
 * To do so, you must run the STS GetSessionToken API call.
 * `aws sts get-session-token --serial-number arn-of-the-mfa-device --tokencode code-from-token --duration-seconds 3600`
-  * <img src="../../.gitbook/assets/image (96).png" alt="" data-size="original">
+  * <img src="../../.gitbook/assets/image (220).png" alt="" data-size="original">
 
 ### AWS SDK
 
@@ -75,12 +75,10 @@ The Java SDK (example) will look for credentials in this order:
 * The IAM user has S3FullAccess permissions.
 * The application only uses one S3 bucket, so according to best practices:
   * An **IAM Role** & **EC2 Instance Profile** was created for the EC2 instance.
-    *   EC2 Instance Profile: [_IAM Roles on EC2 Instances Tutorial_](https://www.youtube.com/watch?v=TlCuOjviOhk)
-
-
+    * EC2 Instance Profile: [_IAM Roles on EC2 Instances Tutorial_](https://www.youtube.com/watch?v=TlCuOjviOhk)
   * The Role was assigned the minimum permissions to access that one S3 bucket.
 
-<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (221).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Question: The IAM Instance Profile was assigned to the EC2 instance, but it still had access to all S3 buckets. Why?**
   * Answer: the credentials chain is still giving priorities to the environment variables.
@@ -104,4 +102,4 @@ The Java SDK (example) will look for credentials in this order:
 
 #### SigV4 Request examples
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>

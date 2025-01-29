@@ -4,21 +4,19 @@
 
 The Origin Request Policy in Amazon CloudFront is used to control the information that’s included in an origin request. When a viewer request to CloudFront results in a cache miss (the requested object is not cached at the edge location), CloudFront sends a request to the origin to retrieve the object, this is called an origin request (AWS, 2023a).
 
-
-
 The origin request always includes the URL path, the request body (if there is one), and certain HTTP headers (AWS, 2023a):
 
 * The URL path (the path only, without URL query strings or the domain name)
 * The request body (if there is one)
 * The HTTP headers that CloudFront automatically includes in every origin request, including `Host`, `User-Agent`, and `X-Amz-Cf-Id`
 
-:warning:Other information from the viewer request, such as URL query strings, HTTP headers, and cookies, is not included in the origin request by default.&#x20;
+:warning:Other information from the viewer request, such as URL query strings, HTTP headers, and cookies, is not included in the origin request by default.
 
 To pass other information from the request, such as URL query string, cookies, etc., the "origin request policy" can be used to control the information that is included in an origin request.
 
 **Example Console Config**
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Origins
 
@@ -37,8 +35,6 @@ To pass other information from the request, such as URL query string, cookies, e
 
 <summary>Configure OAC when creating a new CloudFront distribution (AWS, 2023c)</summary>
 
-
-
 1. Sign in to the AWS Management Console and open the CloudFront console at [https://console.aws.amazon.com/cloudfront/v3/home](https://console.aws.amazon.com/cloudfront/v3/home)
 2. Choose **Create Distribution**.
 3. In the **Origin** configuration section, select an S3 origin from the **Origin domain** drop-down list.
@@ -46,28 +42,24 @@ To pass other information from the request, such as URL query string, cookies, e
 5. Enter a name to uniquely identify the current origin configuration.
 6. Choose Origin access control settings (or create one).
 
-![](<../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1).png>)
+<img src="../../.gitbook/assets/image (86).png" alt="" data-size="original">
 
-![](<../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
-
-
+<img src="../../.gitbook/assets/image (87).png" alt="" data-size="original">
 
 7. Follow the detailed instructions [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html) on how to configure the rest of the settings.
 8. Once the distribution is successfully created, you must update the S3 bucket policy, you can reference the policy statement provided on distribution detail page (Figure 3).
 
-<!---->
-
-8. Note that the policy provided only includes permissions to read objects from S3. If you would like to also upload objects to S3, you must update the policy with additional permissions for “_s3:PutObject_”.
+8) Note that the policy provided only includes permissions to read objects from S3. If you would like to also upload objects to S3, you must update the policy with additional permissions for “_s3:PutObject_”.
 
 </details>
 
 ### CloudFront High Level Diagram
 
-<figure><img src="../../.gitbook/assets/image (114).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - S3 as an Origin
 
-<figure><img src="../../.gitbook/assets/image (115).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront vs S3 Cross Region Replication
 
@@ -89,7 +81,7 @@ To pass other information from the request, such as URL query string, cookies, e
 * You want to maximize the Cache Hit ratio to minimize requests to the origin.
 * • You can invalidate part of the cache using the CreateInvalidation API.
 
-<figure><img src="../../.gitbook/assets/image (120).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (244).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### What is CloudFront Cache Key?
 
@@ -98,7 +90,7 @@ To pass other information from the request, such as URL query string, cookies, e
 * If you have an application that serves up content that varies based on user, device, language, location.
 * You can add other elements (HTTP headers, cookies, query strings) to the Cache Key using CloudFront Cache Policies.
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (245).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CloudFront Policies – Cache Policy
 
@@ -121,7 +113,7 @@ To pass other information from the request, such as URL query string, cookies, e
   * Only specified headers included in the Cache Key.
   * Specified headers are also forwarded to Origin.
 
-<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (246).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront Caching – Cache Policy Query Strings
 
@@ -134,12 +126,12 @@ To pass other information from the request, such as URL query string, cookies, e
 * **Include All-Except**
   * Include all query strings in the Cache Key except the specified list.
   * All query strings are forwarded except the specified list.
-* **All**&#x20;
+* **All**
   * Include all query strings in the Cache Key.
   * All query strings are forwarded.
   * Worst caching performance.
 
-<figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront Policies - Origin Request Policy :warning:
 
@@ -153,7 +145,7 @@ To pass other information from the request, such as URL query string, cookies, e
 
 ### Cache Policy vs. Origin Request Policy
 
-<figure><img src="../../.gitbook/assets/image (118).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Cache Invalidations
 
@@ -163,9 +155,7 @@ To pass other information from the request, such as URL query string, cookies, e
 
     * You can invalidate all files (`*`_) or a special path (`/images/*`_).
 
-
-
-    <figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (243).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Cache Behaviors
 
@@ -177,21 +167,21 @@ To pass other information from the request, such as URL query string, cookies, e
   * `/*` (default cache behavior).
 * :warning:When adding additional Cache Behaviors, the Default Cache Behavior is always the last to be processed and is always `/*`.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CloudFront - Cache Behaviors - Sign In Page
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Maximize cache hits by separating static and dynamic distributions
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - ALB or EC2 as an origin
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-### CloudFront - Signed URLs&#x20;
+### CloudFront - Signed URLs
 
 * Use Case: You want to distribute paid shared content to premium users over the world.
 * We can use CloudFront Signed URL / Cookie. We attach a policy with:
@@ -218,11 +208,9 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 
 #### CloudFront Signed URL Diagram
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront Signed URL vs S3 Pre-Signed URL
-
-
 
 ### CloudFront Geo Restriction
 
@@ -231,7 +219,7 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 * The "country" in determined using a 3 party Geo-IP database.
 * Use Case: Copyright Laws to control access to contend.
 
-<figure><img src="../../.gitbook/assets/image (116).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Price Classes
 
@@ -241,9 +229,9 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
   * Price Class 200: most regions, but excludes the most expensive regions.
   * Price Class 100: only the least expensive regions.
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Multiple Origin
 
@@ -253,7 +241,7 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
   * `/api/*`
   * `/*`
 
-<figure><img src="../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Origin Groups
 
@@ -261,9 +249,9 @@ How signed URLs work with CloudFront and Amazon S3 (AWS, 2023b):
 * Origin Group: one primary and one secondary origin.
 * If the primary origin fails, the second one is used.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 CloudFrount - Field Level Encryption
 
@@ -275,7 +263,7 @@ CloudFrount - Field Level Encryption
   * Specify set of fields in POST requests that you want to be encrypted (up to 10 fields).
   * Specify the public key to encrypt them.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CloudFront - Real Time Logs
 
@@ -285,9 +273,7 @@ CloudFrount - Field Level Encryption
   * Sampling Rate – percentage of requests for which you want to receive.
   * Specific fields and specific Cache Behaviors (path patterns).
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### References
 

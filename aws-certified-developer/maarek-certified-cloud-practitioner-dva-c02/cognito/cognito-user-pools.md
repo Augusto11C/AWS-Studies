@@ -12,19 +12,19 @@
     * mfa
     * Federated identities: users from facebook, google, SAML...
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (281).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (280).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Cognito User Pools (CUP) - Integrations
 
 #### **API Gateway - Authentication**
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (282).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### **Aplication Load Balancer - Authentication**
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (283).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Users can be securely authenticated by your Application Load Balancer.
 * The work of authenticating users can be offloaded to your load balancer.
@@ -39,7 +39,7 @@
 
 #### Cognito Authentication
 
-<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (275).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * `GET /api/data` will be performed by users.
 * The ALB will be set up with HTTPS with the action authenticate-cognito.
@@ -50,7 +50,7 @@
 
 #### OIDC User Authentication
 
-<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (274).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * (1) The client will make a HTTP request.
 * (2) The user will be redirected by the ALB for authentication to the **authentication endpoint** of the **identity provider**.
@@ -66,9 +66,9 @@
 
 ### Cognito User Pools - Hosted Authentitation UI
 
-Amazon Cognito provides a hosted UI that allows for a configurable web interface for user sign in. The hosted UI can be accessed from a domain name that is added to the user pool.&#x20;
+Amazon Cognito provides a hosted UI that allows for a configurable web interface for user sign in. The hosted UI can be accessed from a domain name that is added to the user pool.
 
-There are two options for adding a domain name to a user pool:&#x20;
+There are two options for adding a domain name to a user pool:
 
 * (1) using an Amazon Cognito domain.
 * (2) domain name that you own.
@@ -86,20 +86,20 @@ The hosted UI supports several Amazon Cognito authentication operations:
 
 **AWS Console Config**
 
-<figure><img src="../../../.gitbook/assets/image (160).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (323).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (161).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (324).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (162).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (325).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (165).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (328).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Hosted UI Custom Domain
 
 * For custom domains, you must create an ACM certificate in us-east-1
 * the custom domain must be defined in the "app integration" section
 
-<figure><img src="../../../.gitbook/assets/image (166).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (329).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Adaptative Authentication
 
@@ -112,9 +112,9 @@ The hosted UI supports several Amazon Cognito authentication operations:
 
 ### Cognito User Pools - Lambda Triggers
 
-<figure><img src="../../../.gitbook/assets/image (164).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (327).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (163).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (326).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### What is Returned After Log in with a Cognito User Pool?
 
@@ -123,12 +123,9 @@ The hosted UI supports several Amazon Cognito authentication operations:
 * What is called the header, the payload, and the signature are included in these tokens.
 * Base64 allows these tokens to be transmitted over the network easily.
 
-<figure><img src="../../../.gitbook/assets/image (167).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (330).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * To ensure the JWT can be trusted, the signature must be verified.
 * The validity of JWT tokens issued by Cognito User Pools can be verified with the help of libraries.
 * The user information (sub UUID, given\_name, email, phone\_number, attributes…) is contained in the Payload.
 * All user details from Cognito / OIDC can be retrieved from the sub UUID.
-
-
-

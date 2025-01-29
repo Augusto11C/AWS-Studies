@@ -6,7 +6,7 @@
 * **Deployment:** Deploying to AWS is simplified with AWS SAM, requiring only two commands. It can also use AWS CodeDeploy to deploy Lambda functions, providing advanced deployment capabilities.
 * **Local Testing:** AWS SAM includes a local test tool to emulate your AWS Lambda and API Gateway environment locally. This allows you to test your serverless application locally before deploying.
 
-<figure><img src="../../.gitbook/assets/image (168).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (331).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### Summary
 

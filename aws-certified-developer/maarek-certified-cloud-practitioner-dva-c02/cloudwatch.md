@@ -4,13 +4,11 @@
 
 Font: AWS, 2023a
 
-
-
 ### How to send Amazon ECS logs to Splunk
 
 [https://repost.aws/knowledge-center/ecs-task-fargate-splunk-log-driver](https://repost.aws/knowledge-center/ecs-task-fargate-splunk-log-driver)
 
-<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (247).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 ### References
 

@@ -1,8 +1,8 @@
-# SMITH  Certified Cloud Practitioner CLF-C01
+# SMITH Certified Cloud Practitioner CLF-C01
 
 ## Cloud Practitioner Exam Details
 
-![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/image.png)
+![](<../../.gitbook/assets/image (151).png>)
 
 ### What does the AWS Cloud Practitioner Certification Validate?
 
@@ -25,7 +25,7 @@
 
 ### Question Domains
 
-![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-01-09-56-28.png)
+![](../../.gitbook/assets/2022-08-01-09-56-28.png)
 
 ### Question Format
 

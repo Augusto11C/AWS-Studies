@@ -17,7 +17,7 @@ Controls which are solely the responsibility of the customer based on the applic
 
 ### Shared Responsibility Big Picture
 
-![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-04-09-30-16.png)
+![](../../.gitbook/assets/2022-08-04-09-30-16.png)
 
 ```
 Which of the following responsibilities would the customer manage directly, according to the AWS shared responsibility model? (pick two)
@@ -47,9 +47,9 @@ Encryption at rest is when data at rest is given layers of encryption for securi
 
 ### In-Transit Encryption On AWS
 
-![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-10-09-31-44.png)
+![](../../.gitbook/assets/2022-08-10-09-31-44.png)
 
-* The CloudFront distribution must have the DNS CNAME records listed in the configuration for TLS. ![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-10-09-33-41.png)
+* The CloudFront distribution must have the DNS CNAME records listed in the configuration for TLS. ![](../../.gitbook/assets/2022-08-10-09-33-41.png)
 * The API Gateway must also have the DNS CNAME records listed in the configuration for TLS.
 * Classic and Network load balancers support 1 TLS cert, Application load balancers support 25.
 * This cert does not require matching DNS or can even be expired as the ELB does not validate TLS.

@@ -49,4 +49,4 @@ In order to perform envelope encryption with AWS KMS, you need to use the "Gener
   * **Data Encryption Key (DEK) Caching**: If you’re using the `GenerateDataKey` API, you can cache the data encryption key locally. This reduces the number of API calls made to AWS, thereby reducing the usage of your quota. This is a feature of the encryption SDK itself.
   * **Request Quota Increase**: If you’re consistently exceeding your limit, you can request a quota increase. This can be done through an API call or by opening a support ticket with AWS. This will allow for more cryptographic operations to be performed.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (267).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>

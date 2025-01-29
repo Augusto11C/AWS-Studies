@@ -1,7 +1,7 @@
 # EC2 Fundamentals
 
-* EC2 = Elastic Compute Cloud = Infrastructure as a Service&#x20;
-* It mainly consists in the capability of :&#x20;
+* EC2 = Elastic Compute Cloud = Infrastructure as a Service
+* It mainly consists in the capability of :
   * Renting virtual machines (EC2).
   * Storing data on virtual drives (EBS).
   * Distributing load across machines (ELB).
@@ -37,7 +37,7 @@
 * They act as a "firewall".
 *   They control how traffic is allowed into or out of our EC2 Instances.
 
-    <figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (149).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Security groups only contain **allow** rules.
 * Security groups rules can reference by IP or by security group.
 
@@ -49,9 +49,7 @@
 * Control of outbound network (from the instance to other).
 *   AWS Console example:
 
-
-
-    <figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Good to Know About Security Groups
 
@@ -102,7 +100,7 @@
 
 * Get a discount based on long-term usage (up to 72% \~ same as RIs).
 * Commit to a certain type of usage ($10/hour for 1 or 3 years):
-  * &#x20;"I want to spend $10 per hour for the next 3 years".
+  * "I want to spend $10 per hour for the next 3 years".
   * Usage beyond EC2 Saving Plans is billed at the On-demand price.
 * Locked to a specific instance family & AWS Region (e.g. m5 in us-easy-1).
 * Flexible across:
@@ -139,7 +137,7 @@
   * On-demand – pay per second for active Dedicated Host.
   * Reserved - 1 or 3 years (No Upfront, Partial Upfront, All Upfront).
 * The most expensive option.
-* **Useful for software that have complicated licensing model (BYOL – Bring Your Own License).**&#x20;
+* **Useful for software that have complicated licensing model (BYOL – Bring Your Own License).**
 * Or for companies that have strong regulatory or compliance needs.
 
 #### EC2 Dedicated Instances

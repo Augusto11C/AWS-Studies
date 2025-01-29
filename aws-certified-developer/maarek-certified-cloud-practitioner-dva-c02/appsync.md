@@ -7,9 +7,9 @@
 * **Mobile Apps**: For mobile applications, AppSync provides local data access and data synchronization capabilities. This allows for a smooth and responsive user experience, even in conditions of intermittent connectivity.
 * **GraphQL Schema**: The journey with AppSync begins by uploading a GraphQL schema. This schema defines the structure of your data and forms the basis for operations that your application can perform.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (259).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (260).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### **AppSync - Security**
 

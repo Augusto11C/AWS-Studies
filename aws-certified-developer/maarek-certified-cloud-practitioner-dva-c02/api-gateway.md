@@ -17,12 +17,10 @@ In Amazon API Gateway, you can use two types of integrations with Lambda functio
 
 In summary, use "Lambda Function Integration" when you need more control over the request and response structure, and you want to define explicit mappings. Use "Lambda Proxy Integration" when you want a simpler approach with minimal request/response transformations and want to pass the entire request to the Lambda function.
 
-
-
 ### TODO Hands-on
 
 * Create a lambda authorizer to control access to API Gateway's endpoints.
 
-<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (333).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (332).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>

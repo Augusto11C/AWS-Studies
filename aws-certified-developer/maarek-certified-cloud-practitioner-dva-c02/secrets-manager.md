@@ -29,6 +29,4 @@ In summary, AWS Secrets Manager provides robust capabilities for managing secret
 
 Both services offer secure storage for sensitive information. Secrets Manager provides more advanced features like automatic secret rotation, while SSM Parameter Store is a simpler and more cost-effective option. The choice between the two depends on your specific needs and budget.
 
-
-
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (268).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>

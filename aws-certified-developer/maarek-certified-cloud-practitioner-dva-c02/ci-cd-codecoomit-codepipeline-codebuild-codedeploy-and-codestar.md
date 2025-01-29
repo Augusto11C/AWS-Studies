@@ -1,13 +1,13 @@
 # CI/CD - CodeCoomit, CodePipeline, CodeBuild, CodeDeploy and CodeStar
 
-* AWS CodeCommit: \~ GitHub, GitLab, Bitbucket.&#x20;
+* AWS CodeCommit: \~ GitHub, GitLab, Bitbucket.
 * [AWS CodeBuild](https://aws.amazon.com/codebuild/): A fully managed **continuous integration** service that compiles source code, runs tests, and produces software packages that are ready to deploy, on a dynamically created build server.
 * [AWS CodeDeploy](https://aws.amazon.com/codedeploy/): A fully managed deployment (**continuous deployment**) service that automates software deployments to a variety of compute services such as Amazon EC2, [AWS Fargate](https://aws.amazon.com/fargate/), [AWS Lambda](http://aws.amazon.com/lambda), and your on-premises servers.
-* [AWS CodePipeline](https://aws.amazon.com/codepipeline/): A fully managed [**continuous delivery**](https://aws.amazon.com/devops/continuous-delivery/) service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.&#x20;
+* [AWS CodePipeline](https://aws.amazon.com/codepipeline/): A fully managed [**continuous delivery**](https://aws.amazon.com/devops/continuous-delivery/) service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Font: <a href="https://www.youtube.com/@TinyTechnicalTutorials">Tiny Technical Tutorials</a>, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CodeCommit
 
@@ -26,7 +26,7 @@
   * :warning: Repositories are automatically encrypted at rest using AWS KMS.
   * Encrypted in transit (can only use HTTPS or SSH – both secure).
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CodePipeline
 
@@ -39,34 +39,32 @@
   * Each stage can have sequential actions and/or parallel actions.
   * Manual approval can be defined at any stage.
 
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 * :point\_up:A stage can have multiple Action Groups.
 * In the image abova the stage DeployToProd has to action groups:
   * (1) The first Action group requires a manual approve to proceed to the next action group.
-  * (2) The second Action group is executed when there is an manual approve and it will deploy in elasticbeanstalk an application in the prod environment.&#x20;
+  * (2) The second Action group is executed when there is an manual approve and it will deploy in elasticbeanstalk an application in the prod environment.
 
 #### Events vs. Webhooks vs. Polling
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Manual Approval Stage (Exam Question)
 
 * IAM User must have permission to access the pipeline and approve the stage/step.
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 ### CodeBuild
 
@@ -92,11 +90,11 @@
 * Use CloudWatch Alarms to notify if you need "thresholds" for failures.
 * Build projects can be defined with CodePipeline or Code Build
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
-* CodeBuild will run every thing inside a docker container. It will use the image specified in the `run-as: Linux-user-name` (2) in the file `buildspec.yml`  or a default image choose by AWS (1).
+* CodeBuild will run every thing inside a docker container. It will use the image specified in the `run-as: Linux-user-name` (2) in the file `buildspec.yml` or a default image choose by AWS (1).
 
-<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### The file buildspec.yml
 
@@ -251,25 +249,23 @@ artifacts:
     - build/libs/*.jar
 ```
 
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (18) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 #### CodeBuild - Local Build
 
@@ -293,16 +289,16 @@ artifacts:
   * CREATE\_UPDATE – create or update an existing stack
   * DELETE\_ONLY – delete a stack if it exists
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * (1) CloudFormation deploy/creates an infra & app in a test environment.
 * (2) CloudBuild test this newly created environment
 * (3) CloudFormation, after the tests, delete the test environment.
-* (4) CloudFormation, after the deletion os the test environment, deploy/creates the prod environment.&#x20;
+* (4) CloudFormation, after the deletion os the test environment, deploy/creates the prod environment.
 
 ### CodeDeploy
 
-* Deployment service that automates application deployment.&#x20;
+* Deployment service that automates application deployment.
 * Deploy new applications versions to EC2 Instances, On -premises servers, Lambda functions, ECS Services.
 * Automated Rollback capability in case of failed deployments, or trigger CloudWatch Alarm.
 * Gradual deployment control.
@@ -354,7 +350,7 @@ hooks:
 * It can be installed and updated automatically if you’re using Systems Manager.
 * :warning: The EC2 Instances must have sufficient permissions to access Amazon S3 to get deployment bundles.
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - Lambda Platform
 
@@ -369,7 +365,7 @@ hooks:
   * LambdaCanary10Percent30Minutes.
 * AllAtOnce: Immediate.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - ECS Platform
 
@@ -382,7 +378,7 @@ hooks:
   * LambdaCanary10Percent30Minutes.
 * AllAtOnce: Immediate.
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - Deployment to EC2
 
@@ -394,13 +390,13 @@ hooks:
 
 * In-place Deployment:
   * Updates existing EC2 instances.
-  * Newly created EC2 instances by an ASG will also get automated deployments.&#x20;
+  * Newly created EC2 instances by an ASG will also get automated deployments.
 * Blue/Green Deployment:
   * A new Auto-Scaling Group is created (settings are copied).
   * Choose how long to keep the old EC2 instances (old ASG).
   * :warning: Must be using an ELB.
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### CodeDeploy - Redeploy & Rollbacks
 
@@ -415,25 +411,24 @@ hooks:
 
 * Creating a CodeDeploy Application called DemoApplication:
 
-<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 * Code Deploy Deployment Group for DemoApplication:
 
-<figure><img src="../../.gitbook/assets/image (129).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (253).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (254).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (256).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (257).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (134).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (258).png" alt=""><figcaption><p>Font: AWS Console, 2023</p></figcaption></figure>
 
 ### References
 
 Tine Technical Tutorials. _Basics of CodeStar, Code Pipeline, CodeBuild, Cloud9, CodeCommit, CodeDeploy - AWS for Beginners_. \[Videoaula]. YouTube, 2023. Disponível em: <[https://www.youtube.com/watch?v=iGCJ-N7bPX0](https://www.youtube.com/watch?v=iGCJ-N7bPX0)>. Acesso em: 01 oct. 2023.
 
 AWS. _What is the AWS Serverless Application Model (AWS SAM)?_. Amazon Web Services. Disponível em: <[https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)>. Acesso em: 01 oct. 2023a.
-

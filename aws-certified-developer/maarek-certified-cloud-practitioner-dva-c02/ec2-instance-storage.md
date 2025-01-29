@@ -7,7 +7,7 @@
 * An EBS Volume is a durable, block-level storage device that can be attached to an EC2 instance.
 * EBS volumes persist **independently from** the running life of an **EC2** instance, and when you create an EBS volume.
 * It is **automatically** **replicated** within its **Availability Zone** to prevent data loss due to failure of any single hardware component.
-* EBS volumes are particularly **well-suited** for use as the primary storage **for data that requires frequent updates**, such as the system drive for an instance or storage for a database application.&#x20;
+* EBS volumes are particularly **well-suited** for use as the primary storage **for data that requires frequent updates**, such as the system drive for an instance or storage for a database application.
 
 > Think of them as a "network USB stick" (MAAREK, 2023).
 
@@ -20,7 +20,7 @@
 
 #### EBS - Delete on Termination Attribuite
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (141).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * Controls the EBS behaviour when an EC2 instance terminates:
   * By default, the root EBS volume is deleted (attribute enabled).
@@ -66,7 +66,7 @@
 
 #### EBS - Volume Types Summary
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### Provisioned IOPS (PIOPS) SSD (io1/io2)
 
@@ -89,7 +89,7 @@
 * Not Necessary to detach volume to do snapshot, but recommended.
 * Can Copy snapshots across AZ or Region.
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="557"><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (142).png" alt="" width="557"><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 #### EBS Snapshots Features
 
@@ -140,7 +140,7 @@
 * EFS works with EC2 instances in multi-AZ.
 * Highly available, scalable, expensive (3x gp2), **pay per use**.
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 
 * **Use cases:**
   * content management.
@@ -160,7 +160,7 @@
   * 1000s of concurrent NFS clients, 10 GB+ of throughput.
   * Grow to petabyte-scale network file system, automatically.
 * Performance Mode (set at EFS creation time).
-  * General purpose (default) -  **latency-sensitive** use cases (web server, CMS, etc...).
+  * General purpose (default) - **latency-sensitive** use cases (web server, CMS, etc...).
   * Max I/O - higher latency, throughput, highly parallel (big data, media processing).
 * Throughput Mode
   * Bursting: 1 TB = 50MiB/s + burst of up to 100MiB/s
@@ -176,11 +176,7 @@
     * Standard: for frequently accessed files.
     * Infrequent access (EFS-IA): cost to retrieve files, lower price to store. Enable EFS-IA with a Life-cycle policy
 
-
-
-    <figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
-
-
+    <figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption><p>Font: MAAREK, 2023</p></figcaption></figure>
 * Availability and durability
   * Standard: Multi-AZ, great for prod.
   * One Zone: One AZ, great for dev
@@ -212,8 +208,6 @@ You can run a database on an EC2 instance that uses an Instance Store, but you'l
 
 </details>
 
-
-
 You have provisioned an 8TB `gp2` EBS volume and you are running out of IOPS. What is **NOT** a way to increase performance?
 
 A. A Mount EBS volumes in RAID 0
@@ -231,4 +225,3 @@ C
 For EBS gp2 volumes, it has max. IOPS of 16,000 or equivalent 5334 GB.
 
 </details>
-

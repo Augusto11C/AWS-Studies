@@ -73,7 +73,7 @@ Elasticity - the ability of a system to increase and decrease resources allocate
 
 #### TCO - Total Cost of Ownership
 
-![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-02-09-12-45.png)
+![](../../.gitbook/assets/2022-08-02-09-12-45.png)
 
 * **What is missing from this list?**
   * KTLO - Keeping THe Lights On
@@ -113,7 +113,7 @@ Answer: D
 
 #### Well-Architected Framework
 
-![](../../cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-02-09-18-49.png)
+![](../../.gitbook/assets/2022-08-02-09-18-49.png)
 
 * **Operational Excellence**
   * The ability to **support development and run workloads effectively**, gain insight into their operations, and to continuously improve supporting processes and procedures to deliver business value.
@@ -177,4 +177,3 @@ D. Sustainability
 
 The Reliability pillar has some overlap with Performance Efficiency, but the maximum capacity values belong in Reliability
 ```
-
