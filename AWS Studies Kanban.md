@@ -8,6 +8,9 @@ kanban-plugin: board
 
 - [ ] [[Card 3 1]]
 	
+	
+	![](Pasted%20image%2020250201174140.png)
+	
 	![[Pasted image 20250201170709.png]]
 - [ ] Card # 4
 	
