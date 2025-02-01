@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "2876f8fb0fe26425",
+    "type": "split",
+    "children": [
+      {
+        "id": "088f59b9962ff80e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9dd895bc9fb3171",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Note.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Note"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a05ca02baaff800a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7bb2fb0d1e6b45a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2220486def7f3b6c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "211e3b50641f5dea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1518bc2439408816",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8507f3d5b636bae1",
+    "type": "split",
+    "children": [
+      {
+        "id": "dcc816f8d45cc5cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bd816ab03c0d68d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled/Note.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Note"
+            }
+          },
+          {
+            "id": "957b891f863dc36e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Untitled/Note.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Note"
+            }
+          },
+          {
+            "id": "91365cc138685cd4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "556fe4834cb367c8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Untitled/Note.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Note"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "f9dd895bc9fb3171",
+  "lastOpenFiles": [
+    "What is this?.md",
+    "vpc-peering.md",
+    "resources/Pasted image 20250201174735.png",
+    "AWS Studies Kanban.md",
+    "resources/Pasted image 20250201174140.png",
+    "resources",
+    "Notes/Note.md",
+    "Notes/resources/Pasted image 20250201174106.png",
+    "Notes/resources",
+    "Notes/Untitled.md",
+    "SUMMARY.md",
+    "aws-lambda.md",
+    "Card 3 1.md",
+    "Card 3.md",
+    "attachments/Pasted image 20250201170709.png",
+    "attachments/Pasted image 20250201170630.png",
+    "Pasted image 20250201165156.png",
+    "attachments",
+    "Untitled Kanban 1.md",
+    "Notes/attachments/Pasted image 20250201165727.png",
+    "Notes/attachments",
+    "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ci-cd-codecoomit-codepipeline-codebuild-codedeploy-and-codestar.md",
+    "Notes",
+    "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-nitro-enclaves.md",
+    "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-cloud-development-kit-cdk.md",
+    "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/appsync.md",
+    "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/amplify.md",
+    "aws-certified-developer/aws-certified-developer.md",
+    "http-403-forbidden-error-when-connecting-to-api-gateway-apis-from-a-vpc.md",
+    "cloud-practitioner-certification/SMITH-OREILLY-COURSE/image.png",
+    "cloud-practitioner-certification/SMITH-OREILLY-COURSE/Slides-SMITH-OREILLY-AWS-Cloud-Practitioner-Certification.pdf",
+    "cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-10-09-33-41.png",
+    "cloud-practitioner-certification/SMITH-OREILLY-COURSE/2022-08-10-09-31-44.png",
+    "cloud-practitioner-certification/SMITH-OREILLY-COURSE",
+    "cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01",
+    "cloud-practitioner-certification",
+    "aws-identity-access-management-iam.md",
+    "aws-elastic-container-service.md",
+    "aws-direct-connect-vs-aws-vpn.md",
+    "aws-cognito.md",
+    "aws-codexyz.md",
+    "aws-cloud-practitioner/smith-oreilly-course/domain-2-security-and-compliance.md",
+    "aws-cloud-practitioner/smith-oreilly-course/domain-1-cloud-concepts.md",
+    "aws-cloud-practitioner/smith-oreilly-course/README.md",
+    "aws-cloud-practitioner/smith-oreilly-course"
+  ]
+}
