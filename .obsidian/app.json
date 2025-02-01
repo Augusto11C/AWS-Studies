@@ -1,4 +1,5 @@
 {
   "attachmentFolderPath": "./resources",
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "useMarkdownLinks": true
 }
