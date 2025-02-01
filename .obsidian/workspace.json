@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "page-1.md",
+                "file": "What is this?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "page-1"
+              "title": "What is this?"
             }
           }
         ]
@@ -172,8 +172,10 @@
   },
   "active": "f9dd895bc9fb3171",
   "lastOpenFiles": [
-    "Untitled/Note.md",
-    "page-1.md",
+    "Notes/Untitled.md",
+    "Notes/Note.md",
+    "aws-lambda.md",
+    "What is this?.md",
     "AWS Studies Kanban.md",
     "Card 3 1.md",
     "Card 3.md",
@@ -183,10 +185,10 @@
     "vpc-peering.md",
     "attachments",
     "Untitled Kanban 1.md",
-    "Untitled/attachments/Pasted image 20250201165727.png",
-    "Untitled/attachments",
+    "Notes/attachments/Pasted image 20250201165727.png",
+    "Notes/attachments",
     "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/ci-cd-codecoomit-codepipeline-codebuild-codedeploy-and-codestar.md",
-    "Untitled",
+    "Notes",
     "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-nitro-enclaves.md",
     "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/aws-cloud-development-kit-cdk.md",
     "aws-certified-developer/maarek-certified-cloud-practitioner-dva-c02/appsync.md",
@@ -203,7 +205,6 @@
     "cloud-practitioner-certification/SMITH-OREILLY-COURSE",
     "cloud-practitioner-certification/CARTER-AWS-Exam-Guide-CLF-C01",
     "cloud-practitioner-certification",
-    "aws-lambda.md",
     "aws-identity-access-management-iam.md",
     "aws-elastic-container-service.md",
     "aws-direct-connect-vs-aws-vpn.md",
@@ -215,7 +216,6 @@
     "aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/carter-exam-guide-clf-c01-core-services.md",
     "aws-cloud-practitioner/carter-aws-exam-guide-clf-c01/README.md",
     "aws-cloud-practitioner/smith-oreilly-course",
-    "aws-cloud-practitioner/notes.md",
     "aws-cloud-practitioner/carter-aws-exam-guide-clf-c01",
     "aws-cloud-practitioner"
   ]
